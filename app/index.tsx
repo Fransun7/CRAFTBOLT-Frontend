@@ -2,10 +2,36 @@ import { Text, View } from "react-native";
 
 export default function Index() {
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-red-500 text-2xl font-bold">
-        Edit app/index.tsx to edit this screen.
-      </Text>
+    <View className="bg-blue-800 h-full">
+      <View className="border-4 border-green-600">
+        <Text className="text-red-500 text-2xl font-bold p-20">
+          Welcome to CRAFTBOLT
+        </Text>
+      </View>
+
+      <View className="border-4 border-green-600">
+        <Text className="text-red-500 text-2xl font-bold p-20">
+          Welcome to CRAFTBOLT
+        </Text>
+      </View>
+
+      <View className="border-4 border-green-600">
+        <Text className="text-red-500 text-2xl font-bold p-20">
+          Welcome to CRAFTBOLT
+        </Text>
+      </View>
+
+      <View className="border-4 border-green-600">
+        <Text className="text-red-500 text-2xl font-bold p-20">
+          Welcome to CRAFTBOLT
+        </Text>
+      </View>
+
+      <View className="border-4 border-green-600">
+        <Text className="text-red-500 text-2xl font-bold p-20">
+          Welcome to CRAFTBOLT
+        </Text>
+      </View>
     </View>
   );
 }
