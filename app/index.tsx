@@ -1,37 +1,18 @@
-import { Text, View } from "react-native";
+import { useState } from "react";
+import { View } from "react-native";
+import CustomInput from "../components/inputs/CustomInput";
 
 export default function Index() {
+  const [phone, setPhone] = useState("");
+
   return (
-    <View className="bg-blue-800 h-full">
-      <View className="border-4 border-green-600">
-        <Text className="text-red-500 text-2xl font-bold p-20">
-          Welcome to CRAFTBOLT
-        </Text>
-      </View>
-
-      <View className="border-4 border-green-600">
-        <Text className="text-red-500 text-2xl font-bold p-20">
-          Welcome to CRAFTBOLT
-        </Text>
-      </View>
-
-      <View className="border-4 border-green-600">
-        <Text className="text-red-500 text-2xl font-bold p-20">
-          Welcome to CRAFTBOLT
-        </Text>
-      </View>
-
-      <View className="border-4 border-green-600">
-        <Text className="text-red-500 text-2xl font-bold p-20">
-          Welcome to CRAFTBOLT
-        </Text>
-      </View>
-
-      <View className="border-4 border-green-600">
-        <Text className="text-red-500 text-2xl font-bold p-20">
-          Welcome to CRAFTBOLT
-        </Text>
-      </View>
+    <View className="flex-1 justify-center">
+      <CustomInput
+        label="Phone Number"
+        placeholder="Enter Your phone number"
+        value={phone}
+        onChangeText={setPhone}
+      />
     </View>
   );
 }
