@@ -1,11 +1,13 @@
 import { PrimaryButton } from "@/components/buttons";
 import CustomInput from "@/components/inputs/CustomInput";
 import { Typography } from "@/design-system/typography";
+import { useRouter } from "expo-router";
 import { useState } from "react";
 import { Text, TextInput, View } from "react-native";
 import ArrowLeft from "../../assets/images/Rectangle 2.svg";
 function Phone() {
   const [phone, setPhone] = useState("");
+  const router = useRouter();
   return (
     <View className="p-[16px] flex flex-col flex-1 justify-between bg-surface-background">
       <View className="">
@@ -40,7 +42,17 @@ function Phone() {
       </View>
 
       <View className="flex justify-center items-center mt-[-250px]">
-        <PrimaryButton title="Send Code" />
+        <PrimaryButton
+          title="Send Code"
+          // I want to send data from the phone screen to the otp screen
+          onPress={() => {
+            if (!phone) return;
+            router.push({
+              pathname: "/auth/otp",
+              params: { phoneNumber: phone },
+            });
+          }}
+        />
       </View>
 
       <View className="flex flex-row justify-center mb-[23px]">
