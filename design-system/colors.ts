@@ -18,7 +18,7 @@ export const Colors = {
   status: {
     success: "#16A34A", //Success Green. Used for "NIN Verified" badges, completed job status tags, and payment confirmation checks.
     successBg: "#F0FDF4", //Success Light Tint. Background fill for verified badge pills and positive alert callout boxes.
-    warning: "#FF9FOA", //Warning Amber. Used for 15-minute job acceptance countdown timers, pending verifications, and warning alerts.
+    warning: "#FF9F0A", //Warning Amber. Used for 15-minute job acceptance countdown timers, pending verifications, and warning alerts.
     error: "#DC2626", //Error Red. Used for form validation error outlines, inline error messages, dispute flags, and destructive actions.
     errorBg: "#FEF2F2", //Error Light Tint. Background fill for error alert callouts and dispute status banners.
   },

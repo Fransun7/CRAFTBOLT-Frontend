@@ -11,6 +11,8 @@ interface CustomInputProps {
   error?: boolean;
   errorMessage?: string;
   disabled?: boolean;
+  className?: string;
+  containerClassName?: string;
   onChangeText: (text: string) => void;
 }
 
@@ -21,6 +23,8 @@ function CustomInput({
   error,
   errorMessage,
   disabled,
+  className,
+  containerClassName,
   onChangeText,
 }: CustomInputProps) {
   // I NEED A STATE FOR THE FOCUS OF THE INPUT FIELD
@@ -28,7 +32,7 @@ function CustomInput({
 
   return (
     // I NEED THE COMPONENT TO DISPLAYS LABEL IF ONLY IT EXIST
-    <View>
+    <View className={containerClassName}>
       {label && (
         <Text
           style={[
@@ -51,7 +55,7 @@ function CustomInput({
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         editable={!disabled}
-        className="h-12 rounded-lg border px-4"
+        className={`h-[42px] rounded-input border px-4 ${className ?? ""} `}
         style={{
           borderColor: disabled
             ? Colors.surface.border
@@ -64,9 +68,9 @@ function CustomInput({
           color: disabled
             ? Colors.surface.textMuted
             : Colors.surface.textPrimary,
-          backgroundColor: disabled
-            ? Colors.surface.background
-            : Colors.surface.surface,
+          // backgroundColor: disabled
+          //   ? Colors.surface.background
+          //   : Colors.surface.surface,
         }}
       />
       {error && errorMessage && (
