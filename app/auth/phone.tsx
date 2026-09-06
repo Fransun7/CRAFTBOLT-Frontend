@@ -7,7 +7,19 @@ import { Text, TextInput, View } from "react-native";
 import ArrowLeft from "../../assets/images/Rectangle 2.svg";
 function Phone() {
   const [phone, setPhone] = useState("");
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
+
+  const handleSendCode = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      router.push({
+        pathname: "/auth/otp",
+        params: { phoneNumber: phone },
+      });
+    }, 1000);
+  };
   return (
     <View className="p-[16px] flex flex-col flex-1 justify-between bg-surface-background">
       <View className="">
@@ -47,11 +59,9 @@ function Phone() {
           // I want to send data from the phone screen to the otp screen
           onPress={() => {
             if (!phone) return;
-            router.push({
-              pathname: "/auth/otp",
-              params: { phoneNumber: phone },
-            });
+            handleSendCode();
           }}
+          loading={loading}
         />
       </View>
 

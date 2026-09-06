@@ -4,45 +4,59 @@
     "slug": "CRAFTBOLT",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/final-app-icon.png",
     "scheme": "craftboltfrontend",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fransun.craftbolt",
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#080167",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-foreground.png"
+        "backgroundColor": "#045389",
+        "foregroundImage": "./assets/images/final-app-icon.png"
       },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "package": "com.fransun.craftbolt",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/images/icon.png"
+      "favicon": "./assets/images/final-app-icon.png"
     },
+
     "plugins": [
       "expo-router",
+      "expo-font",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#F8FAFC",
+          "backgroundColor": "#F0F4F8",
+          "image": "./assets/images/transparent.png",
           "dark": {
-            "backgroundColor": "#c7a90f"
-          }
+            "backgroundColor": "#F0F4F8",
+            "image": "./assets/images/transparent.png"
+          },
+          "imageWidth": 200,
+          "resizeMode": "contain"
         }
-      ],
-      "expo-font"
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "8bcd30f3-db94-4950-96d9-bd58101061dd"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/8bcd30f3-db94-4950-96d9-bd58101061dd"
     }
   }
 }
